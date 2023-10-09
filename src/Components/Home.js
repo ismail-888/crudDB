@@ -7,9 +7,11 @@ import { Link} from "react-router-dom"
 function Home() {
     const [data,setData]=useState([])
     // const navigate=useNavigate();
+    // const URL='http://localhost:3030/users'
+     const URL ='https://my-json-server.typicode.com/ismail-888/json-server/users'
     
     useEffect(()=>{
-        axios.get('http://localhost:3030/users')
+        axios.get(URL)
         .then(res=>setData(res.data))
         .catch(err=>console.log(err))
     },[])
@@ -17,7 +19,7 @@ function Home() {
     const handleDelete=(id)=>{
         const confirm=window.confirm("Would you like ot Delete ?")
         if(confirm){
-            axios.delete('http://localhost:3030/users/'+id)
+            axios.delete('https://my-json-server.typicode.com/ismail-888/json-server/users/'+id)
             .then(res=>{
                 console.log(res)
                 // location.reload();

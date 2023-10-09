@@ -7,6 +7,8 @@ function Update() {
   // const [data,setData]=useState([])
   const{id}=useParams();
   const navigate=useNavigate()
+  const URL="https://my-json-server.typicode.com/ismail-888/json-server/users/"
+  // const URL='http://localhost:3030/users/'
 
   const [values,setValues]=useState({
     name:'',
@@ -15,16 +17,16 @@ function Update() {
   })
 
     useEffect(()=>{
-        axios.get('http://localhost:3030/users/'+id)
+        axios.get(URL+id)
         .then(res=>{
           setValues(res.data)
         })
         .catch(err=>console.log(err))
-      },[])
+      },[id])
 
       const handleUpdate=(e)=>{
         e.preventDefault();
-        axios.put('http://localhost:3030/users/'+id,values)
+        axios.put(URL+id,values)
         .then(res=>{
            console.log(res);
             navigate('/');

@@ -11,10 +11,12 @@ function Create() {
     phone:''
   })
   const navigate=useNavigate()
+   // const URL='http://localhost:3030/users'
+   const URL ='https://my-json-server.typicode.com/ismail-888/json-server/users'
 
   const handleSubmit=(event)=>{
     event.preventDefault();
-    axios.post('http://localhost:3030/users',values)
+    axios.post(URL,values)
         .then(res=>{
            console.log(res);
             navigate('/')

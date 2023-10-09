@@ -7,11 +7,13 @@ function Read() {
 
   const [data,setData]=useState([])
   const{id}=useParams();
+  // const URL='http://localhost:3030/users/'
+  const URL ='https://my-json-server.typicode.com/ismail-888/json-server/users/'
     useEffect(()=>{
-        axios.get('http://localhost:3030/users/'+id)
+        axios.get(URL+id)
         .then(res=>setData(res.data))
         .catch(err=>console.log(err))
-      },[])
+      },[id])
   return (
     <div className="d-flex justify-content-center align-items-center bg-light vh-100 w-100">
        <div className="w-50 border bg-white shadow px-5 pt-3 pb-5 rounded">
