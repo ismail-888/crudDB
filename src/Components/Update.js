@@ -7,8 +7,8 @@ function Update() {
   // const [data,setData]=useState([])
   const{id}=useParams();
   const navigate=useNavigate()
-  const URL="https://my-json-server.typicode.com/ismail-888/json-server/users/"
-  // const URL='http://localhost:3030/users/'
+  // const URL="https://my-json-server.typicode.com/ismail-888/json-server/users/"
+  const URL='http://localhost:3030/users/'
 
   const [values,setValues]=useState({
     name:'',
