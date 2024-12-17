@@ -43,7 +43,7 @@ function Update() {
           <div className="mb-2">
             <label htmlFor="name">Name:</label>
             <input type="text" name="name" className="form-control" placeholder="Enter Name"
-             value={values.name}onChange={e=>setValues({...values,name:e.target.value})}/>
+             value={values.name} onChange={e=>setValues({...values,name:e.target.value})}/>
           </div>
           <div className="mb-2">
             <label htmlFor="email">Email:</label>

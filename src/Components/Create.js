@@ -31,19 +31,22 @@ function Create() {
 
           <div className="mb-2">
             <label htmlFor="name">Name:</label>
-            <input type="text" name="name" className="form-control" placeholder="Enter Name"
+            <input type="text"  name="name" className="form-control" placeholder="Enter Name"
             onChange={e=>setValues({...values,name:e.target.value})}/>
           </div>
+
           <div className="mb-2">
             <label htmlFor="email">Email:</label>
             <input type="text" name="email" className="form-control" placeholder="Enter Eamil"
              onChange={e=>setValues({...values,email:e.target.value})}/>
           </div>
+
           <div className="mb-2">
             <label htmlFor="phone">Phone:</label>
             <input type="text" name="phone" className="form-control" placeholder="Enter Phone"
              onChange={e=>setValues({...values,phone:e.target.value})}/>
           </div>
+
           <button className="btn btn-success">Submit</button>
           <Link to="/" className="btn btn-primary ms-3">Back</Link>
 
